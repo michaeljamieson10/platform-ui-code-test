@@ -1,4 +1,28 @@
 <div class="list-container">
-  <h2>Providers</h2>
-
+  <h2 class="blue-bg">Providers</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <i>Click <strong>anywhere</strong> on the card to add to selected Provider</i>
+      <h3 class="blue-bg">Not Selected Provider </h3>
+      <hr>
+      <span *ngFor="let prov of unselectedProviders" (click)="selectOrUnselectProvider(prov.id, false)">
+          <app-provider-card 
+            [prov]="prov" 
+            [selectListProv]=false
+          ></app-provider-card>
+      </span>
+    </div>
+    <div class="col-md-6">
+      <i>Click on the <strong>x</strong> button to remove from selected providers and return to unselected list</i>
+      <h3 class="blue-bg">Selected Provider</h3>
+      <hr>
+      <span *ngFor="let prov of selectedProviders">
+        <app-provider-card 
+          [prov]="prov" 
+          [selectListProv]=true
+          (clickedUnselect)="clickedUnselect($event)"
+          >
+        </app-provider-card>
+      </span>
+    </div>
 </div>

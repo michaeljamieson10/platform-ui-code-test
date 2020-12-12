@@ -1,0 +1,12 @@
+<div class="card bordersA">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-2 col-md-8">
+        <h5 class="card-title"><strong>Name: </strong>{{prov.name}}</h5>
+        <p class="card-text"><strong>Address: </strong>{{prov.address}}</p>
+        <p class="card-text"><strong>Phone Number: </strong>{{makeRegExPhoneNumber(prov.phone)}}</p>
+      </div>
+        <button *ngIf='selectListProv' (click)="onClickIdEmit(prov.id)" class="bg-danger btn-lg buttonRemove">X</button>
+    </div>
+  </div>
+</div>

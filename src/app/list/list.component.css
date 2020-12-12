@@ -2,9 +2,17 @@
   padding: 0px 24px;
   height: 100vh;
   width: 96%;
-  border: 1px solid lightgray;
+  /* border: 1px solid lightgray; */
 }
 
 h2 {
   border-bottom: 1px solid lightgray;
+}
+.blue-bg{
+  text-align: center;
+  color: white;
+  background-color: #195FF8;
+  border-radius: 5em;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
